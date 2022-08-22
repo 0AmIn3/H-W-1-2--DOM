@@ -52,3 +52,36 @@ img_5.onclick = () => {
 }
 
 
+let modal = document.querySelector('.modal')
+let modal_bg = document.querySelector('.modal_bg')
+let openBtn = document.querySelector('.modelwindowbtn')
+let closeBtn = document.querySelector('.close-modal-btn')
+
+openBtn.onclick = () => {
+    modal.style.display = "flex"
+    modal_bg.style.display = "block"
+
+    setTimeout(() => {
+        modal.style.transform = "translate(-50%, -50%) scale(1)"
+        modal.style.opacity = "1"
+        modal_bg.style.opacity = "1"
+
+
+    }, 200);
+
+
+}
+closeBtn.onclick = () => {
+    modal.style.transform = "translate(-50%, -50%) scale(0)"
+    modal.style.opacity = "0"
+    modal_bg.style.opacity = "0"
+
+    setTimeout(() => {
+
+        modal.style.display = "none"
+        modal_bg.style.display = "none"
+    }, 200);
+
+}
+
+

@@ -5,6 +5,10 @@
     font-family: 'Roboto'
 }
 
+.cont{
+    max-width: 1960px;
+    margin: 0 auto;
+}
 a {
     text-decoration: none;
 }
@@ -92,10 +96,21 @@ header p a:hover {
     align-items: center;
 }
 
-.credi-box-credi div p a {
+.modelwindowbtn{
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+}
+.modelwindowbtn a {
     text-decoration: none;
     color: #267CD3;
+    transition: 0.3s;
+
 }
+.modelwindowbtn:hover a{
+    text-decoration: underline;
+}
+
 
 .credi-box-credi-text-1 {
     font-size: 12px;
@@ -208,6 +223,7 @@ header p a:hover {
     top: 100px;
     border-radius: 18px;
     overflow: hidden;
+    z-index: 3;
 }
 
 .phone-with-phone img {
@@ -452,3 +468,91 @@ header p a:hover {
     width: 100%;
     height: 100%;
 }
+
+
+.modal {
+    width: 816px;
+    height: 400px;
+    background-color: white;
+    border-radius: 14px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.2);
+    transition: 0.5s ease;
+    opacity: 0;
+    z-index: 5;
+}
+
+.modal_bg {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease;
+    z-index: 4;
+}
+.modal-top-main{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding-top: 74px;
+    text-align: center;
+    position: relative;
+}
+.modal-box-1{
+    padding: 14px  84px 24px 78px;
+    text-align: center;
+}
+.close-modal-btn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url(./img/211650_close_circled_icon.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.modal-select-box{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.select-form{
+    width: 600px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid #D2D2D7;
+    border-radius: 18px;
+    padding: 0 20px;
+    background-color: transparent;
+}
+/* .sp{
+    position: absolute;
+    top: 30px;
+    left: 137px;
+    font-size: 10px;
+    color: #6F6F74;
+} */
+
+
+
